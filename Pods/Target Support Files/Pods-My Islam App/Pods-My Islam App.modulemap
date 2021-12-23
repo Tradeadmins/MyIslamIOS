@@ -1,0 +1,6 @@
+framework module Pods_My_Islam_App {
+  umbrella header "Pods-My Islam App-umbrella.h"
+
+  export *
+  module * { export * }
+}

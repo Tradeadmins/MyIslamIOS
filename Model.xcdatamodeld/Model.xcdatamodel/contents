@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18A391" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="GregorianCalender" representedClassName="GregorianCalender" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="day" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="month" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="HijriCalender" representedClassName="HijriCalender" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hijriArDay" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hijriEnDay" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hijriEnMonth" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hjriArMonth" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="MangeSetting" representedClassName="MangeSetting" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="NotificationEntities" representedClassName="NotificationEntities" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="gregorian" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GregorianCalender" syncable="YES"/>
+        <relationship name="hijriCalender" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="HijriCalender" syncable="YES"/>
+        <relationship name="notificationTracker" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PrayerTrackerNotificationTiming" syncable="YES"/>
+    </entity>
+    <entity name="NotificationsTimings" representedClassName="NotificationsTimings" syncable="YES">
+        <attribute name="asr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dhuhr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fajr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imsak" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isha" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="maghrib" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="midnight" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sunrise" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sunset" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="PrayerTrackerNotificationTiming" representedClassName="PrayerTrackerNotificationTiming" syncable="YES">
+        <attribute name="aStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ptracker" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timing" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="PrayTrakerNotificaion" representedClassName="PrayTrakerNotificaion" syncable="YES">
+        <attribute name="asr" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="asrAlarm" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="asrTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dhuhr" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="dhuhrAlarm" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="dhuhrTimie" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fajr" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="fajrAlarm" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="fajrTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isha" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="ishaAlarm" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="ishaTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="maghrib" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="maghribAlarm" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="maghribTime" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="GregorianCalender" positionX="-49.421875" positionY="-530.74609375" width="128" height="88"/>
+        <element name="HijriCalender" positionX="-281.4140625" positionY="-539.76953125" width="128" height="120"/>
+        <element name="NotificationEntities" positionX="-413.9921875" positionY="-709.3046875" width="128" height="103"/>
+        <element name="NotificationsTimings" positionX="-603.14453125" positionY="-564.43359375" width="128" height="180"/>
+        <element name="PrayerTrackerNotificationTiming" positionX="-360" positionY="-522" width="128" height="105"/>
+        <element name="PrayTrakerNotificaion" positionX="-437.29296875" positionY="-477.05859375" width="128" height="268"/>
+        <element name="MangeSetting" positionX="-396" positionY="-558" width="128" height="60"/>
+    </elements>
+</model>
